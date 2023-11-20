@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cek Kepribadian berdasarkan Golongan Darah</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: pink;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h2 {
+            color: cornsilk;
+        }
+
+        label {
+            color: cornsilk;
+            font-size: 1.2rem;
+            margin-top: 20px;
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        input {
+            color: pink;
+            padding: 10px;
+            font-size: 1rem;
+            border: 0;
+            border-radius: .3rem;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: cornsilk;
+            margin-top: 20px;
+        }
+
+        p.invalid {
+            color: brown;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Cek Kepribadian berdasarkan Golongan Darah</h2>
+
+    <label for="golonganDarah">Masukkan Golongan Darah Anda (A, B, AB, O): </label>
+    <input type="text" id="golonganDarah" maxlength="2" oninput="cekKepribadian()">
+
+    <p id="hasilKepribadian"></p>
+
+    <script>
+        function cekKepribadian() {
+            var golonganDarah = document.getElementById('golonganDarah').value.toUpperCase();
+            var hasilKepribadian = document.getElementById('hasilKepribadian');
+
+            switch (golonganDarah) {
+                case 'A':
+                    hasilKepribadian.innerHTML = "Identik dengan sifatnya yang terorganisir, kritis, tenang dalam menghadapi masalah.";
+                    break;
+                case 'B':
+                    hasilKepribadian.innerHTML = "Semangat yang tinggi, aktif, kreatif, dan selalu ingin tahu.";
+                    break;
+                case 'AB':
+                    hasilKepribadian.innerHTML = "Memiliki karakter yang kritis, rasional, bertanggung jawab, suka menolong, dan mudah beradaptasi.";
+                    break;
+                case 'O':
+                    hasilKepribadian.innerHTML = "Sikapnya yang mudah beradaptasi dengan lingkungan baru atau easy-going.";
+                    break;
+                default:
+                    hasilKepribadian.innerHTML = "Masukkan golongan darah yang valid (A, B, AB, O).";
+                    hasilKepribadian.classList.add('invalid');
+                    break;
+            }
+
+            // Menghilangkan class 'invalid' jika sudah valid
+            if (golonganDarah === 'A' || golonganDarah === 'B' || golonganDarah === 'AB' || golonganDarah === 'O') {
+                hasilKepribadian.classList.remove('invalid');
+            }
+        }
+    </script>
+
+</body>
+</html>

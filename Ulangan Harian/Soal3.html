@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Negara</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: pink;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      p {
+        font-size: 1.5rem;
+        background-color: cornsilk;
+        color: pink;
+        padding: 20px;
+        border-radius: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Negara-Negara di Dunia</p>
+    <script>
+      var negaraArray = ["Indonesia", "Jepang", "Korea", "Thailand", "Vietnam", "Filipina", "Amerika", "Inggris", "Meksiko", "Cina"];
+
+      console.log("Data Negara: ", negaraArray);
+
+      var indexIndonesia = negaraArray.indexOf("Indonesia");
+      console.log("Indonesia berada di indeks ke-", indexIndonesia);
+
+      negaraArray.push("Malaysia");
+
+      console.log("Data Negara Setelah Penambahan: ", negaraArray);
+    </script>
+  </body>
+</html>

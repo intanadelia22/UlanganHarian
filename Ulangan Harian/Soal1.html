@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentence</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: pink;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        label {
+            font-size: 1.5rem;
+            background-color: cornsilk;
+            color: palevioletred;
+            padding: 20px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <label id="kalimat"></label>
+    <script>
+        var word = "Javascript";
+        var second = "is";
+        var third = "awesome";
+        var fourth = "and";
+        var fifth = "I";
+        var sixth = "love";
+        var seventh = "it!";
+        var sentence = word + " " + second + " " + third + " " + fourth + " " + fifth + " " + sixth + " " + seventh;
+        console.log(sentence);
+        document.getElementById("kalimat").innerText = sentence;
+    </script>
+</body>
+</html>

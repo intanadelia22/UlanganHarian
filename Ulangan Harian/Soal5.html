@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Merubah Kalimat dengan DOM</title>
+    <style>
+      body {
+        background-color: white;
+        color: black;
+        font-family: "Arial", sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        transition: background-color 0.5s, color 0.5s;
+      }
+
+      p {
+        padding: 20px;
+        border: 1px solid #dbadad;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      p:hover {
+        background-color: #ba8d8d;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="kalimat" onclick="ubahKalimat()">Saya merasa belum bisa belajar javascript</p>
+
+    <script>
+      function ubahKalimat() {
+        var kalimatElement = document.getElementById("kalimat");
+        kalimatElement.innerHTML = "Ternyata saya masih kurang berlatih belajar javascript";
+        document.body.style.backgroundColor = "lightpink";
+        document.body.style.color = "black";
+      }
+    </script>
+  </body>
+</html>
